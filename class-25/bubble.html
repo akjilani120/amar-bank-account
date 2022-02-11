@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bubble Event</h1>
+    <section id="bubble-sec">
+        <h2>Bubble system</h2>
+        <ul id="bubble-list">
+            <li>Lorem, ipsum.</li>
+            <li id="second-li">Ullam, delectus.</li>
+            <li>Exercitationem, quibusdam.</li>
+            <li>Unde, voluptatibus.</li>
+            <li>Rem, cumque?</li>
+            <li>Alias, itaque.</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById("second-li").addEventListener("click", function(event){
+            console.log("I am second list")
+            event.stopImmediatePropagation();
+        })
+        document.getElementById("second-li").addEventListener("click", function(event){
+            console.log("I am third list")
+            // event.stopPropagation();
+        })
+        document.getElementById("second-li").addEventListener("click", function(event){
+            console.log("I am forth list")
+            // event.stopPropagation();
+        })
+        document.getElementById("second-li").addEventListener("click", function(event){
+            console.log("I am five list")
+            // event.stopPropagation();
+        })
+        document.getElementById("bubble-list").addEventListener("click", function(){
+            console.log("I am bubble  list")
+        })
+        document.getElementById("bubble-sec").addEventListener("click", function(){
+            console.log("I am section bubble  ")
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main> 
+        <article class='blog'>
+            <h1 id="first-title">Blog title -1</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta beatae porro voluptatum placeat amet omnis quisquam quia sit maxime. Aliquam!</p>
+        </article>
+        <article class='blog'>
+            <h1>Blog title -2</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta beatae porro voluptatum placeat amet omnis quisquam quia sit maxime. Aliquam!</p>
+        </article>
+        <article class='blog' id="special">
+            <h1 id="special">Blog title -3</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta beatae porro voluptatum placeat amet omnis quisquam quia sit maxime. Aliquam!</p>
+        </article>
+    </main>
+    <script>
+        const firstTitle=document.getElementById('first-title');
+        firstTitle.style.backgroundColor="tomato";
+        firstTitle.style.padding='30px';
+        firstTitle.style.margin='30px';
+        // ak name onek gulo class name thake segulo kaj korar jonno for loop use krte hbe
+        const blogsElement=document.getElementsByClassName('blog');
+        
+        for(let blogs of blogsElement){
+        blogs.style.border='3px solid red';
+        blogs.style.padding="20px";
+        blogs.style.margin='30px'
+        }
+      
+    </script>
+   <script src="js file/custom.js"></script>
+</body>
+</html>

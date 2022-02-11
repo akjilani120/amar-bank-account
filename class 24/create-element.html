@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body>
+    <header>
+        <ul id="blogs-list">
+            <li>list-Item 1</li>
+            <li>list-Item 2</li>
+            <li>list-Item 3</li>
+            <li>list-Item 4</li>
+        </ul>
+    </header>
+    <main>
+        <section class="blogs-sec" id="blogs-sec">
+            <article  class="blog-main">
+                <h2>Awesome blog-1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores ut architecto sapiente iure temporibus, eius praesentium similique? Reiciendis, ea!</p>
+            </article>
+            <article class="blog-main">
+                <h2>Awesome blog-2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores ut architecto sapiente iure temporibus, eius praesentium similique? Reiciendis, ea!</p>
+            </article>
+            <article class="blog-main">
+                <h2>Awesome blog-3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores ut architecto sapiente iure temporibus, eius praesentium similique? Reiciendis, ea!</p>
+            </article>
+            <article class="blog-main">
+                <h2 id="last-title">Awesome blog-4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores ut architecto sapiente iure temporibus, eius praesentium similique? Reiciendis, ea!</p>
+            </article>
+        </section>
+    </main>
+    <script>
+       
+       let li=document.createElement('li')
+        li.innerText="list-Item 5";
+        const ul=document.getElementById("blogs-list")
+        ul.appendChild(li)
+        let createArticle=document.createElement("article");
+        createArticle.classList.add('blog-main')
+        let createH2=document.createElement('h2');
+        createH2.innerText="Awesome Blog 5";
+        let createP=document.createElement('p');
+        createP.innerText='Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores ut architecto sapiente iure temporibus, eius praesentium similique? Reiciendis, ea!'
+        createArticle.appendChild(createH2)
+        createArticle.appendChild(createP)
+        let blogsSec=document.getElementById("blogs-sec");
+        blogsSec.appendChild(createArticle)
+
+        const addBlog=document.getElementsByClassName('blog-main');
+        for(let blogs of addBlog){
+            blogs.style.border="2px solid red";
+            blogs.style.margin='15px';
+            blogs.style.padding='25px';
+        }
+    </script>
+</body>
+</html>

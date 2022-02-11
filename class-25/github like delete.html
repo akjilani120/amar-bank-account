@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Secrec delete system</h1>
+    <h1 id="remove-item">I am remove the text</h1>
+    <input type="text" id="input-delete" placeholder="Please type Delete">
+    <button id="delete-btn" disabled>delete</button>
+    <script>
+    // document.getElementById("input-delete").addEventListener("focus", function(){
+    //   document.body.style.backgroundColor="red";
+        
+    //  })   
+    // document.getElementById("input-delete").addEventListener("blur", function(){
+    //   document.body.style.backgroundColor="white";
+        
+    //  })   
+    //  keydown
+    // document.getElementById("input-delete").addEventListener("keydown", function(){
+    //  const keySpecialdown=document.getElementById("input-delete");
+    //  console.log(keySpecialdown.value)
+        
+    //  })   
+  
+    //  keypress
+    // document.getElementById("input-delete").addEventListener("keypress ", function(){
+    //  const keySpecialPress=document.getElementById("input-delete");
+    //  console.log(keySpecialPress.value)
+        
+    //  })   
+    // keyUp
+    // document.getElementById("input-delete").addEventListener('keyup', function(){
+    //    let keySpecialUp=document.getElementById('input-delete');
+    //    console.log(keySpecialUp.value)
+    // })
+    // // change
+    // document.getElementById("input-delete").addEventListener('change', function(event){
+    //   const DeleteButton=document.getElementById("delete-btn");
+    //   if(even.target.value=="delete"){
+    //     DeleteButton.removeAttribute("disabled")
+    //   }
+    // })
+
+   
+    document.getElementById("input-delete").addEventListener('keyup', function(event){
+        const DeleteButton=document.getElementById("delete-btn");
+     if(event.target.value=="delete"){
+        DeleteButton.removeAttribute("disabled")
+     }else{
+        DeleteButton.setAttribute("disabled", true)
+     }
+      
+    })
+    document.getElementById("delete-btn").addEventListener("click", function(){
+        document.getElementById("remove-item").style.display="none";
+    })
+   
+    </script>
+</body>
+</html>

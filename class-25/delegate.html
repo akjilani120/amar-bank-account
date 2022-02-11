@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input-work{
+            border: 5px solid red;
+            width: 80%;
+        }
+        #list-container li{
+            list-style: none;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <ul id="list-container">
+            <li class="list-items">Lorem, ipsum.</li>
+            <li class="list-items">Maxime, veniam.</li>
+            <li class="list-items">Ratione, totam.</li>
+            <li class="list-items">Dolor, harum.</li>
+            <li class="list-items">Earum, vero!</li>
+            <li class="list-items">Facilis, amet!</li>
+        </ul>
+        <br>
+        <button id="create-ul">Add New</button>
+    </section>
+    <script>
+        // const listItems=document.getElementsByClassName("list-items")
+        // for(let item of listItems){
+        //     item.addEventListener('click', function(event){
+        //     //   const listContainer=  document.getElementById('list-container');         
+        //     //     listContainer.removeChild(item);
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+        document.getElementById("create-ul").addEventListener('click', function(){
+            const listContainer=  document.getElementById('list-container');      
+            const li=document.createElement('li');
+                li.innerText="I am added element";
+                listContainer.appendChild(li);
+            const input=document.createElement("input");
+            listContainer.appendChild(input)
+            input.classList.add("input-work")
+        })
+        document.getElementById('list-container').addEventListener("click", function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+    </script>
+</body>
+</html>
