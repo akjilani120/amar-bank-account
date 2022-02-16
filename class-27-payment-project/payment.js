@@ -26,7 +26,7 @@ function getProductNumber(inputId){
 function getTotalPrice(){
     const phonePrice=getProductNumber("phone") * 1219;
     const casePrice=getProductNumber("case") * 59;
-    const subTotal= phonePrice + phonePrice;
+    const subTotal= phonePrice + casePrice;
     const taxTotal=subTotal /10;
     const total=taxTotal + subTotal;
     

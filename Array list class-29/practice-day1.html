@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="jilani" onclick="changeColor()">Abdul Kader Jilani</h1>
+    <section id="sec-part">
+        <ul id="list-head">
+            <li id="list-item1">Lorem, ipsum.</li>
+            <li id="list-item2">Qui, quos!</li>
+            <li id="list-item3">Vitae, assumenda!</li>
+            <li id="list-item4">Optio, voluptatem!</li>
+            <li id="list-item5">Qui, esse.</li>
+            <input id="count-value" min="0" type="text" value="0"> <button id="plus-number" style="color: rgb(241, 241, 241); font-size: 30px; font-weight: bolder; background-color: black; padding: 10px; cursor: pointer; border-radius: 5px;" >Plus</button>
+        </ul>
+    </section>
+    <button class="" id="added-list">More list</button>
+    <script>
+        document.body.style.backgroundColor="rgba(255, 99, 34, 0.5)";
+        function changeColor(){
+            document.getElementById("jilani").style.color="red"
+        }
+        document.getElementById("added-list").addEventListener("click", function(){
+           const li=document.createElement("li");
+           li.innerText="I am added list";
+            const ul=document.getElementById("list-head");
+            ul.appendChild(li);
+        })
+        document.getElementById("sec-part").addEventListener("click", function(event){
+            event.target.parentNode.removeChild(event.target)
+        })
+        document.getElementById("plus-number").addEventListener("click", function(){
+            const sum=1;
+            const countNumber=document.getElementById("count-value");
+           const countValue=parseInt( countNumber.value);
+           countNumber.value=sum + countValue;
+           if(countNumber.value == 5){
+            const hideBtn= document.getElementById("plus-number").setAttribute("disabled", true);
+           
+           }
+        })
+
+    </script>
+</body>
+</html>
